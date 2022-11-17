@@ -12,6 +12,7 @@ import 'package:stacked_services/src/dialog/dialog_service.dart';
 import 'package:stacked_services/src/navigation/navigation_service.dart';
 
 import '../services/database_service.dart';
+import '../stores/work_out_store.dart';
 
 final locator = StackedLocator.instance;
 
@@ -26,4 +27,5 @@ Future<void> setupLocator(
   locator.registerLazySingleton(() => DialogService());
   locator.registerLazySingleton(() => DatabaseMigrationService());
   locator.registerLazySingleton(() => DatabaseService());
+  locator.registerLazySingleton(() => WorkOutStore());
 }

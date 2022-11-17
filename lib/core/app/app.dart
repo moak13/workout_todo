@@ -4,6 +4,7 @@ import 'package:stacked_services/stacked_services.dart';
 
 import '../../features/features.dart';
 import '../services/services.dart';
+import '../stores/stores.dart';
 
 @StackedApp(
   routes: [
@@ -15,7 +16,8 @@ import '../services/services.dart';
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: DatabaseMigrationService),
-    LazySingleton(classType: DatabaseService)
+    LazySingleton(classType: DatabaseService),
+    LazySingleton(classType: WorkOutStore),
   ],
   logger: StackedLogger(),
 )
